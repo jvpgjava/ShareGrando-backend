@@ -1,4 +1,4 @@
-package br.com.jgrando.screengrando;
+package br.com.jgrando.jayshare;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
@@ -18,9 +18,9 @@ public class TokenService {
   private final SecretKey livekitSecret;
 
   public TokenService(
-      @Value("${screengrando.livekit-url}") String livekitUrl,
-      @Value("${screengrando.livekit-api-key}") String livekitKey,
-      @Value("${screengrando.livekit-api-secret}") String livekitSecret) {
+      @Value("${jayshare.livekit-url}") String livekitUrl,
+      @Value("${jayshare.livekit-api-key}") String livekitKey,
+      @Value("${jayshare.livekit-api-secret}") String livekitSecret) {
     this.livekitUrl = livekitUrl;
     this.livekitKey = livekitKey;
     this.livekitSecret = Keys.hmacShaKeyFor(livekitSecret.getBytes(StandardCharsets.UTF_8));
@@ -33,7 +33,7 @@ public class TokenService {
     Instant now = Instant.now();
     return Jwts.builder()
         .issuer(livekitKey)
-        .subject("screengrando-server")
+        .subject("jayshare-server")
         .issuedAt(Date.from(now))
         .expiration(Date.from(now.plusSeconds(60)))
         .claim("video", grant)

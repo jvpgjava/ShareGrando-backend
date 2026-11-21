@@ -12,9 +12,9 @@
     </parent>
 
     <groupId>br.com.jgrando</groupId>
-    <artifactId>screengrando-backend</artifactId>
+    <artifactId>jayshare-backend</artifactId>
     <version>1.0.0</version>
-    <name>ScreenGrando API</name>
+    <name>Jayshare API</name>
 
     <properties>
         <java.version>21</java.version>

@@ -1,4 +1,4 @@
-package br.com.jgrando.screengrando;
+package br.com.jgrando.jayshare;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
@@ -9,7 +9,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class WebConfig implements WebMvcConfigurer {
   private final String frontendBaseUrl;
 
-  public WebConfig(@Value("${screengrando.frontend-base-url}") String frontendBaseUrl) {
+  public WebConfig(@Value("${jayshare.frontend-base-url}") String frontendBaseUrl) {
     this.frontendBaseUrl = frontendBaseUrl;
   }
 

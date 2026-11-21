@@ -1,4 +1,4 @@
-package br.com.jgrando.screengrando;
+package br.com.jgrando.jayshare;
 
 import java.security.MessageDigest;
 import java.security.SecureRandom;
@@ -29,8 +29,8 @@ public class SessionService {
   private final String livekitUrl;
 
   public SessionService(
-      @Value("${screengrando.frontend-base-url}") String frontendBaseUrl,
-      @Value("${screengrando.livekit-url}") String livekitUrl) {
+      @Value("${jayshare.frontend-base-url}") String frontendBaseUrl,
+      @Value("${jayshare.livekit-url}") String livekitUrl) {
     this.frontendBaseUrl = frontendBaseUrl;
     this.livekitUrl = livekitUrl;
   }

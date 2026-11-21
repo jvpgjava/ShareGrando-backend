@@ -1,4 +1,4 @@
-package br.com.jgrando.screengrando;
+package br.com.jgrando.jayshare;
 
 import java.util.List;
 import java.util.Map;

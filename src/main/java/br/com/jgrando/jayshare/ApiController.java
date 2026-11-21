@@ -1,4 +1,4 @@
-package br.com.jgrando.screengrando;
+package br.com.jgrando.jayshare;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;

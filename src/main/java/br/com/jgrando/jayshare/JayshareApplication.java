@@ -1,11 +1,11 @@
-package br.com.jgrando.screengrando;
+package br.com.jgrando.jayshare;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ScreenGrandoApplication {
+public class JayshareApplication {
   public static void main(String[] args) {
-    SpringApplication.run(ScreenGrandoApplication.class, args);
+    SpringApplication.run(JayshareApplication.class, args);
   }
 }

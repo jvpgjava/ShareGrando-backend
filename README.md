@@ -1,6 +1,6 @@
-# ScreenGrando Backend
+# Jayshare Backend
 
-API Spring Boot do ScreenGrando. Não há conta ou login: uma sala é criada diretamente. As sessões e suas chaves ficam em memória neste primeiro corte; reiniciar o processo remove as salas.
+API Spring Boot do Jayshare. Não há conta ou login: uma sala é criada diretamente. As sessões e suas chaves ficam em memória neste primeiro corte; reiniciar o processo remove as salas.
 
 ## Requisitos
 
@@ -16,7 +16,7 @@ Inicie o LiveKit e depois execute:
 mvn spring-boot:run
 ```
 
-Por padrão, a API usa `http://localhost:8080`, LiveKit em `ws://localhost:7880` e as chaves locais `devkey` / `devsecret-livekit-screengrando-32bytes!`. Em produção, configure `LIVEKIT_URL`, `LIVEKIT_API_KEY`, `LIVEKIT_API_SECRET` e `FRONTEND_BASE_URL`; a URL entregue aos navegadores deve ser pública e usar WSS.
+Por padrão, a API usa `http://localhost:8080`, LiveKit em `ws://localhost:7880` e as chaves locais `devkey` / `devsecret-livekit-jayshare-32bytes!`. No PowerShell do LiveKit, execute `$env:LIVEKIT_KEYS = 'devkey: devsecret-livekit-jayshare-32bytes!'` antes de `livekit-server --dev` para usar a mesma chave. Em produção, configure `LIVEKIT_URL`, `LIVEKIT_API_KEY`, `LIVEKIT_API_SECRET` e `FRONTEND_BASE_URL`; a URL entregue aos navegadores deve ser pública e usar WSS.
 
 ## Fluxo das rotas
 

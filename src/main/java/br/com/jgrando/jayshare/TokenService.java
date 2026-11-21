@@ -37,7 +37,7 @@ public class TokenService {
         .issuedAt(Date.from(now))
         .expiration(Date.from(now.plusSeconds(60)))
         .claim("video", grant)
-        .signWith(livekitSecret)
+        .signWith(livekitSecret, Jwts.SIG.HS256)
         .compact();
   }
 
@@ -57,7 +57,7 @@ public class TokenService {
         .expiration(Date.from(expiry))
         .claim("name", name)
         .claim("video", grant)
-        .signWith(livekitSecret)
+        .signWith(livekitSecret, Jwts.SIG.HS256)
         .compact();
     return new LivekitToken(livekitUrl, token, expiry.toString());
   }
